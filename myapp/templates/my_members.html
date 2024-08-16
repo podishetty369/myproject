@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% extends "master.html" %}
+  {% block title %}
+    My Project - By Kranthi
+  {% endblock %}
+  {% block content %}
+<body>
+  <div class="mycard">
+  <h1>Members</h1>
+  <ul>
+  {% for x in mymembers %}
+  <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}</li>
+  {% endfor %}
+  </ul>
+</div>
+  {% endblock %}
+</body>
+</html>
